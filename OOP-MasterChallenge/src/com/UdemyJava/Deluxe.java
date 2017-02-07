@@ -14,6 +14,7 @@ public class Deluxe extends Hamburger {
         super(breadType, meatType, false,false,false,false);
         this.chips = true;
         this.drink = true;
+        baseCost = 3.00;
     }
 
     @Override
@@ -23,6 +24,12 @@ public class Deluxe extends Hamburger {
         deluxeAddons.add("Chips");
         System.out.println("Deluxe Addons: " + deluxeAddons);
         return deluxeAddons;
+    }
+
+    @Override
+    public double basePrice() {
+        System.out.println("Base Cost for the Deluxe: $" + baseCost);
+        return baseCost;
     }
 
     @Override

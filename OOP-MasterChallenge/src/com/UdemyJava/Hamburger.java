@@ -12,9 +12,9 @@ public class Hamburger {
     public boolean cheese;
     public boolean tomato;
     public boolean pickle;
-    private int numberOfAddons;
+    public int numberOfAddons;
     public double baseCost;
-    private double addOnCost;
+    public double addOnCost;
     public double customerTotal;
 
     public Hamburger(String breadType, String meatType, boolean lettuce, boolean cheese, boolean tomato, boolean pickle) {
@@ -54,6 +54,11 @@ public class Hamburger {
         }
         System.out.println("Added Items: " + selectedAddOns);
         return selectedAddOns;
+    }
+
+    public double basePrice(){
+        System.out.println("Basic Base Price: $" + baseCost);
+        return baseCost;
     }
 
     public double totalCost (){
